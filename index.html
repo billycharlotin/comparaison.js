@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Comparaison for_of & for_in</h1>
+    <p> Exercice de choix de voiture par rapport au prix on achète ou pas </p><br>
+    <script>
+        
+                let tab =[ 23 , 23, 10, 15.5,5, 8];
+                let resultat=0;
+                // on a utiliser filter pour créer un nouveau tableau avec les notes > à 10
+                let PlusdeDix=tab.filter(note=> note > 10);
+                //on a utiliser MAP pour additionner à chaque +5
+                let nouvelTab =tab.map(n =>n+5);
+                // On a utiliser find pour afficher la premiere note < à 10
+                let Nplus = tab.find(n => n<10);
+                // on a utiliser every pour voir si toute les notes sont > à 10 ça envoie false
+                let NeVery = tab.every(n => n>= 10)
+                // on a vérifié si y a 
+                // des notes dans le tableau <=  10 ça envoie true
+                let NsoMe = tab.some(n=> n<=10)
+                
+                 let somme = tab.reduce((acc,i)=> acc +i, 0)
+                     resultat=somme/tab.length
+                console.log(somme)
+                console.log( resultat)
+                console.log(PlusdeDix)
+                console.log(nouvelTab)
+                console.log(Nplus)
+                console.log(NeVery)
+                console.log(NsoMe)
+              
+    </script>
+</body>
+</html>
